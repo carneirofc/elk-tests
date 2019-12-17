@@ -1,0 +1,4 @@
+config.reload.automatic: true
+http.host: "0.0.0.0"
+xpack.monitoring.elasticsearch.hosts: [ "http://10.0.6.61:9200" ]
+
