@@ -9,3 +9,7 @@ WIP
 
 ^%{HOSTPORT:ioc_host} %{DAY} %{MONTH} %{POSINT} %{POSINT}:%{POSINT}:%{POSINT} %{POSINT} %{POSINT:day}-%{MONTH:month}-%{POSINT:year}
 
+## Filebeat Caputlog
+
+ref: https://www.elastic.co/guide/en/beats/filebeat/current/file-log-rotation.html#log-rotate-example-logrotate
+

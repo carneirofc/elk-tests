@@ -1,0 +1,44 @@
+{
+  "order": 0,
+  "index_patterns": [
+    "caputlog-*"
+  ],
+  "settings": {
+    "index": {
+      "refresh_interval": "5s"
+    }
+  },
+  "mappings": {
+    "properties": {
+      "ioc_host": {
+        "type": "text"
+      },
+      "username": {
+        "type": "text"
+      },
+      "new": {
+        "type": "double"
+      },
+      "old": {
+        "type": "double"
+      },
+      "pv": {
+        "type": "text"
+      },
+      "client_host": {
+        "type": "text"
+      },
+      "message": {
+        "type": "text"
+      },
+      "caput_datetime": {
+        "format": "dd-MMM-yy HH:mm:ss",
+        "type": "date"
+      },
+      "epicslog_datetime": {
+        "format": "E MMM d HH:mm:ss yyyy",
+        "type": "date"
+      }
+    }
+  }
+}
