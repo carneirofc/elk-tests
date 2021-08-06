@@ -1,0 +1,55 @@
+{
+  "index_patterns": ["log4j-*", "archiver-*"],
+  "priority": 0,
+  "template": {
+    "settings": {
+      "index": {
+        "refresh_interval": "5s"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "ndc": {
+          "type": "text"
+        },
+        "javaclass": {
+          "type": "text",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
+        "loglevel": {
+          "type": "text",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
+        "thread": {
+          "type": "text",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
+        "message": {
+          "type": "text",
+          "fields": {
+            "english": {
+              "type": "text",
+              "analyzer": "english"
+            }
+          }
+        },
+        "timestamp": {
+          "format": "yyyy-MM-dd HH:mm:ss,SSS",
+          "type": "date"
+        }
+      }
+    }
+  }
+}

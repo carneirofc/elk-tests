@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  logstash:
+    container_name: logstash
+    image: docker.elastic.co/logstash/logstash:7.14.0
+    volumes:
+      - "./logstash-patterns/:/usr/share/logstash/patterns-extra/:ro"
+      - "./logstash-pipeline/:/usr/share/logstash/pipeline/:ro"
+      - "./logstash-settings:/usr/share/logstash/config:ro"
+      - "./logstash-templates/:/usr/share/logstash/templates/:ro"
+    ports:
+      - 5044:5044
+      - 9600:9600

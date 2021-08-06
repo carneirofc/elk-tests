@@ -2,5 +2,8 @@
 # For more information on multiple pipelines, see the documentation:
 #   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
 
-- pipeline.id: caputlog 
-  path.config: "/usr/share/logstash/pipeline/caputlog.conf"
+#- pipeline.id: caputlog
+#  path.config: "/usr/share/logstash/pipeline/caputlog.conf"
+
+- pipeline.id: log4j
+  path.config: "/usr/share/logstash/pipeline/log4j.conf"
